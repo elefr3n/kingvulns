@@ -1,4 +1,4 @@
-# King Media Script Vulnerabilities
+# King Media Script Multiple Vulnerabilities
 King Media is a premium CMS that allows you create a website where share all type multimedia content like images, videos, etc... I ve found and reported some critical vulnerabilities and here I explain it.
 
 ## King Media > 2.x/3.x/4.1/4.2 Blind RCE
