@@ -38,7 +38,7 @@ Date: 15 Aug 2018
 
 Author: Efren Diaz (https://twitter.com/elefr3n)
 
-Greets: **Daniel F. Rodriguez** aka dj.thd
+Greets: **Daniel F. Rodriguez** aka dj.thd (https://github.com/dj-thd/)
 
 Vendor: Redkings / Kingthemes (https://codecanyon.net/user/redkings)
 
