@@ -4,11 +4,17 @@ King Media is a premium CMS that allows you create a website where share all typ
 ## King Media > 2.x/3.x/4.x Blind RCE
 ### Information
 Date: 15 Aug 2018
+
 Author: Efren Diaz (https://twitter.com/elefr3n)
+
 Vendor: Redkings / Kingthemes (https://codecanyon.net/user/redkings)
+
 Reported to vendor: 11 Jun 2018
+
 Software Link: https://codecanyon.net/item/king-media-video-image-upload-and-share/7877877
+
 Version: from 2.0 to 4.1 (latest)
+
 CVE: None
 
 ### Vulnerability description
@@ -29,12 +35,19 @@ exploit_blind_rce.php
 
 ### Information
 Date: 15 Aug 2018
+
 Author: Efren Diaz (https://twitter.com/elefr3n)
+
 Greets: **Daniel F. Rodriguez** aka dj.thd
+
 Vendor: Redkings / Kingthemes (https://codecanyon.net/user/redkings)
+
 Reported to vendor: 11 Jun 2018
+
 Software Link: https://codecanyon.net/item/king-media-video-image-upload-and-share/7877877
+
 Version: from 1.0 to 4.1 (Lastest)
+
 CVE: None
 
 ### Vulnerability description
@@ -53,12 +66,19 @@ exploit_arbitrary_file_upload.php
 ## King Media 1.9/2.x/3.x/4.x Arbitrary file delete
 ### Information
 Date: 15 Aug 2018
+
 Author: Efren Diaz (https://twitter.com/elefr3n)
+
 Vendor: Redkings / Kingthemes (https://codecanyon.net/user/redkings)
+
 Reported to vendor: 11 Jun 2018
+
 Software Link: https://codecanyon.net/item/king-media-video-image-upload-and-share/7877877
+
 Version: 4.0, 4.1
+
 CVE: None
+
 ### Vulnerability Description:
 The vulnerability resides in the file multipledelete.php file, this file receive a string in the parameter $_POST['name'], and try if exists the files and delete the next patterns:
 ```
