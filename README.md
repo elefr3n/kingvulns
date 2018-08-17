@@ -1,7 +1,7 @@
 # King Media Multiple Vulnerabilities
 King Media is a premium CMS that allows you create a website where share all type multimedia content like images, videos, etc... I ve found and reported some critical vulnerabilities and here I explain it.
 
-## King Media > 2.x/3.x/4.1/4.2 Blind RCE
+## King Media > 2.x/3.x/4.1 Blind RCE
 ### Information
 Date: 15 Aug 2018
 
@@ -31,7 +31,7 @@ With these payload our command will be executed correctly, but we dont get the c
 ### Exploit
 exploit_blind_rce.php
 
-## KingMedia 1.x/2.x/3.x/4.1/4.2 - Arbitrary File Upload
+## KingMedia 1.x/2.x/3.x/4.1 - Arbitrary File Upload
 
 ### Information
 Date: 15 Aug 2018
@@ -63,7 +63,7 @@ Note: For any reason, I haved found some versions of the CMS with a rule in the 
 exploit_arbitrary_file_upload.php
 
 
-## King Media 4.1/4.2 Arbitrary file delete
+## King Media 4.1 Arbitrary file delete
 ### Information
 Date: 15 Aug 2018
 
