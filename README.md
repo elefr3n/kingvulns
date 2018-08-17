@@ -55,7 +55,7 @@ The vulnerability resides in processupload.php, this file process all image uplo
 
 -First checks that the execution comes from an AJAX request (HTTP_X_REQUESTED_WITH).
 -Second check that the filetype is valid image (image/png | image/gif | image/jpeg | image/pjpeg).
--Third executes a custom function called resizeImage() that basically do a thumbnail with some GD library php functions, if the thumbnail creation fails the script stop working, you need upload a **image file with php code inside the metadata** (ex: <?php shell_exec($_POST['command']); ?>) and it will saved on http://site.com/uploads/{your_file_name}-{random_numbers}.{you_file_extension}
+-Third executes a custom function called resizeImage() that basically do a thumbnail with some GD library php functions, if the thumbnail creation fails the script stop working, you need upload a **image file with php code inside the metadata** and it will saved on http://site.com/uploads/{your_file_name}-{random_numbers}.{you_file_extension}
 
 Note: For any reason, I haved found some versions of the CMS with a rule in the .htaccess file to disable the ".php" execution on the uploads directory, no problem we can try with other extensions (let your imagination run wild !)
 
