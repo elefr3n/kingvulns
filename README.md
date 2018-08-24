@@ -1,11 +1,9 @@
 # King Media Multiple Vulnerabilities
-King Media is a premium CMS that allows you create a website where share all type multimedia content like images, videos, etc... I ve found and reported some critical vulnerabilities and here I explain it.
-
-## King Media > 2.x/3.x/4.1 Blind RCE
-### Information
 Date: 15 Aug 2018
 
 Author: Efren Diaz (https://twitter.com/elefr3n)
+
+Greets: **Daniel F. Rodriguez** aka dj.thd (https://github.com/dj-thd/)
 
 Vendor: Redkings / Kingthemes (https://codecanyon.net/user/redkings)
 
@@ -13,9 +11,11 @@ Reported to vendor: 11 Jun 2018
 
 Software Link: https://codecanyon.net/item/king-media-video-image-upload-and-share/7877877
 
-Version: from 2.0 to 4.1 (latest)
+King Media is a premium CMS that allows you create a website where share all type multimedia content like images, videos, etc... I ve found and reported some critical vulnerabilities and here I explain it.
 
-CVE: None
+## King Media > 2.x/3.x/4.1 Blind RCE
+### Information
+Version: from 2.0 to 4.1 (latest)
 
 ### Vulnerability description
 The RCE is in the file videoupload.php, when the script finish the upload, execs a command with the ffmepg library to get a video thumbnail and here his where we can inject our command. The script receives the file with the $_FILES['myfile'] parameter, first checks that the request come from AJAX (HTTP_X_REQUESTED_WIDTH), second checks that the file type is 'video/mp4', and then uploads the video (nothing that we can not bypass). When the upload is finished calls with shell_exec a command to get the video thumbnail with /usr/bin/ffmpeg, we can see in the next line:
@@ -34,21 +34,7 @@ exploit_blind_rce.php
 ## KingMedia 1.x/2.x/3.x/4.1 - Arbitrary File Upload
 
 ### Information
-Date: 15 Aug 2018
-
-Author: Efren Diaz (https://twitter.com/elefr3n)
-
-Greets: **Daniel F. Rodriguez** aka dj.thd (https://github.com/dj-thd/)
-
-Vendor: Redkings / Kingthemes (https://codecanyon.net/user/redkings)
-
-Reported to vendor: 11 Jun 2018
-
-Software Link: https://codecanyon.net/item/king-media-video-image-upload-and-share/7877877
-
 Version: from 1.0 to 4.1 (Lastest)
-
-CVE: None
 
 ### Vulnerability description
 The vulnerability resides in processupload.php, this file process all image uploads. In resume, the script checks that the file is a valid image, but dont check the extension. Other big issue of the script is that works with unauthenticated request.
@@ -65,19 +51,7 @@ exploit_arbitrary_file_upload.php
 
 ## King Media 4.1 Arbitrary file delete
 ### Information
-Date: 15 Aug 2018
-
-Author: Efren Diaz (https://twitter.com/elefr3n)
-
-Vendor: Redkings / Kingthemes (https://codecanyon.net/user/redkings)
-
-Reported to vendor: 11 Jun 2018
-
-Software Link: https://codecanyon.net/item/king-media-video-image-upload-and-share/7877877
-
 Version: 4.0, 4.1
-
-CVE: None
 
 ### Vulnerability Description:
 The vulnerability resides in the file multipledelete.php file, this file receive a string in the parameter $_POST['name'], and try if exists the files and delete the next patterns:
